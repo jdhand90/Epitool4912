@@ -1,0 +1,2 @@
+module RLanguagesHelper
+end

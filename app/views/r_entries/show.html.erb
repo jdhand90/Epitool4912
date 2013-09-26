@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>R language:</strong>
+  <%= @r_entry.r_language_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @r_entry.title %>
+</p>
+
+<p>
+  <strong>Entry:</strong>
+  <%= @r_entry.entry %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @r_entry.order %>
+</p>
+
+<p>
+  <strong>Properties:</strong>
+  <%= @r_entry.properties %>
+</p>
+
+<%= link_to 'Edit', edit_r_entry_path(@r_entry) %> |
+<%= link_to 'Back', r_entries_path %>

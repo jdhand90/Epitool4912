@@ -1,0 +1,29 @@
+<h1>Listing r_languages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Language</th>
+      <th>Properties</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @r_languages.each do |r_language| %>
+      <tr>
+        <td><%= r_language.language %></td>
+        <td><%= r_language.properties %></td>
+        <td><%= link_to 'Show', r_language %></td>
+        <td><%= link_to 'Edit', edit_r_language_path(r_language) %></td>
+        <td><%= link_to 'Destroy', r_language, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New R language', new_r_language_path %>

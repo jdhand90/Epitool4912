@@ -1,0 +1,2 @@
+module RPagesToEntriesHelper
+end

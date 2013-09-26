@@ -1,0 +1,25 @@
+<%= form_for(@r_link) do |f| %>
+  <% if @r_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@r_link.errors.count, "error") %> prohibited this r_link from being saved:</h2>
+
+      <ul>
+      <% @r_link.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :link %><br>
+    <%= f.text_field :link %>
+  </div>
+  <div class="field">
+    <%= f.label :properties %><br>
+    <%= f.text_field :properties %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

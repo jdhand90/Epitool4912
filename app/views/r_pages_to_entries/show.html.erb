@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>R page:</strong>
+  <%= @r_pages_to_entry.r_page_id %>
+</p>
+
+<p>
+  <strong>R entry:</strong>
+  <%= @r_pages_to_entry.r_entry_id %>
+</p>
+
+<p>
+  <strong>Properties:</strong>
+  <%= @r_pages_to_entry.properties %>
+</p>
+
+<%= link_to 'Edit', edit_r_pages_to_entry_path(@r_pages_to_entry) %> |
+<%= link_to 'Back', r_pages_to_entries_path %>

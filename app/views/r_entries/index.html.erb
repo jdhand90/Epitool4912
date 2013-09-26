@@ -1,0 +1,35 @@
+<h1>Listing r_entries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>R language</th>
+      <th>Title</th>
+      <th>Entry</th>
+      <th>Order</th>
+      <th>Properties</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @r_entries.each do |r_entry| %>
+      <tr>
+        <td><%= r_entry.r_language_id %></td>
+        <td><%= r_entry.title %></td>
+        <td><%= r_entry.entry %></td>
+        <td><%= r_entry.order %></td>
+        <td><%= r_entry.properties %></td>
+        <td><%= link_to 'Show', r_entry %></td>
+        <td><%= link_to 'Edit', edit_r_entry_path(r_entry) %></td>
+        <td><%= link_to 'Destroy', r_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New R entry', new_r_entry_path %>

@@ -1,0 +1,35 @@
+<h1>Listing r_property_definitions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Symbol</th>
+      <th>Table</th>
+      <th>Definition</th>
+      <th>Properties</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @r_property_definitions.each do |r_property_definition| %>
+      <tr>
+        <td><%= r_property_definition.property %></td>
+        <td><%= r_property_definition.symbol %></td>
+        <td><%= r_property_definition.table %></td>
+        <td><%= r_property_definition.definition %></td>
+        <td><%= r_property_definition.properties %></td>
+        <td><%= link_to 'Show', r_property_definition %></td>
+        <td><%= link_to 'Edit', edit_r_property_definition_path(r_property_definition) %></td>
+        <td><%= link_to 'Destroy', r_property_definition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New R property definition', new_r_property_definition_path %>

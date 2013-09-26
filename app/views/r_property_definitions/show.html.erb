@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Property:</strong>
+  <%= @r_property_definition.property %>
+</p>
+
+<p>
+  <strong>Symbol:</strong>
+  <%= @r_property_definition.symbol %>
+</p>
+
+<p>
+  <strong>Table:</strong>
+  <%= @r_property_definition.table %>
+</p>
+
+<p>
+  <strong>Definition:</strong>
+  <%= @r_property_definition.definition %>
+</p>
+
+<p>
+  <strong>Properties:</strong>
+  <%= @r_property_definition.properties %>
+</p>
+
+<%= link_to 'Edit', edit_r_property_definition_path(@r_property_definition) %> |
+<%= link_to 'Back', r_property_definitions_path %>

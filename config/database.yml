@@ -1,10 +1,11 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: epitool_development
+  database: d7mtvov43b465c
   pool: 5
-  username: jdhand90
-  password:	rvhvxgpi90
+  username: ajhnxexcpcioeo
+  password:	NmdFmk-JDmy7Dmnu0jLM7xUb3Y
+  host: ec2-54-227-251-13.compute-1.amazonaws.com
 test:
   adapter: postgresql
   encoding: unicode
@@ -12,6 +13,7 @@ test:
   pool: 5
   username: jdhand90
   password:	rvhvxgpi90
+  host: localhost
 production:
   adapter: postgresql
   encoding: unicode
@@ -19,3 +21,4 @@ production:
   pool: 5
   username: jdhand90
   password:	rvhvxgpi90
+  host: localhost

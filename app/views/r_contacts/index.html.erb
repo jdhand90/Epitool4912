@@ -1,0 +1,33 @@
+<h1>Listing r_contacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Profession</th>
+      <th>Email</th>
+      <th>Properties</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @r_contacts.each do |r_contact| %>
+      <tr>
+        <td><%= r_contact.name %></td>
+        <td><%= r_contact.profession %></td>
+        <td><%= r_contact.email %></td>
+        <td><%= r_contact.properties %></td>
+        <td><%= link_to 'Show', r_contact %></td>
+        <td><%= link_to 'Edit', edit_r_contact_path(r_contact) %></td>
+        <td><%= link_to 'Destroy', r_contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New R contact', new_r_contact_path %>

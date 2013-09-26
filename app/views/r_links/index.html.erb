@@ -1,0 +1,29 @@
+<h1>Listing r_links</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Link</th>
+      <th>Properties</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @r_links.each do |r_link| %>
+      <tr>
+        <td><%= r_link.link %></td>
+        <td><%= r_link.properties %></td>
+        <td><%= link_to 'Show', r_link %></td>
+        <td><%= link_to 'Edit', edit_r_link_path(r_link) %></td>
+        <td><%= link_to 'Destroy', r_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New R link', new_r_link_path %>

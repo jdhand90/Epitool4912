@@ -1,0 +1,29 @@
+<%= form_for(@r_entries_to_link) do |f| %>
+  <% if @r_entries_to_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@r_entries_to_link.errors.count, "error") %> prohibited this r_entries_to_link from being saved:</h2>
+
+      <ul>
+      <% @r_entries_to_link.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :r_entry_id %><br>
+    <%= f.number_field :r_entry_id %>
+  </div>
+  <div class="field">
+    <%= f.label :r_link_id %><br>
+    <%= f.number_field :r_link_id %>
+  </div>
+  <div class="field">
+    <%= f.label :properties %><br>
+    <%= f.text_field :properties %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
