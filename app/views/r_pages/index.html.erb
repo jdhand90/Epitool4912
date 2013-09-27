@@ -1,0 +1,33 @@
+<h1>Listing r_pages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>R language</th>
+      <th>Name</th>
+      <th>Template</th>
+      <th>Properties</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @r_pages.each do |r_page| %>
+      <tr>
+        <td><%= r_page.r_language_id %></td>
+        <td><%= r_page.name %></td>
+        <td><%= r_page.template %></td>
+        <td><%= r_page.properties %></td>
+        <td><%= link_to 'Show', r_page %></td>
+        <td><%= link_to 'Edit', edit_r_page_path(r_page) %></td>
+        <td><%= link_to 'Destroy', r_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New R page', new_r_page_path %>

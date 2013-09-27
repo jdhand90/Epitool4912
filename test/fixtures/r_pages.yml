@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  r_language_id: 1
+  name: MyString
+  template: MyString
+  properties: MyString
+
+two:
+  r_language_id: 1
+  name: MyString
+  template: MyString
+  properties: MyString

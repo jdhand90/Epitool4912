@@ -1,0 +1,21 @@
+<% @page.id %>
+
+<div id="wikiList">
+	<ul>
+		<% counter = 0%>
+		<% @page.r_entries.all.each do |entry| %>			
+			<li><a href="#entry-<%= counter %>"><%=entry.title%></a></li>
+			<% counter += 1 %>						
+		<% end %>		
+	</ul>
+	<% counter = 0%>
+	<% @page.r_entries.all.each do |entry| %>	
+		<div id="entry-<%= counter %>">
+			<h2><%= entry.title %></h2>
+			<p>
+				<%= entry.entry%>
+			</p>
+		</div>
+		<% counter += 1 %>			
+	<% end %>
+</div>

@@ -1,0 +1,31 @@
+<h1>Listing r_pages_to_entries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>R page</th>
+      <th>R entry</th>
+      <th>Properties</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @r_pages_to_entries.each do |r_pages_to_entry| %>
+      <tr>
+        <td><%= r_pages_to_entry.r_page_id %></td>
+        <td><%= r_pages_to_entry.r_entry_id %></td>
+        <td><%= r_pages_to_entry.properties %></td>
+        <td><%= link_to 'Show', r_pages_to_entry %></td>
+        <td><%= link_to 'Edit', edit_r_pages_to_entry_path(r_pages_to_entry) %></td>
+        <td><%= link_to 'Destroy', r_pages_to_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New R pages to entry', new_r_pages_to_entry_path %>

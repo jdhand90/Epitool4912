@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>R language:</strong>
+  <%= @r_page.r_language_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @r_page.name %>
+</p>
+
+<p>
+  <strong>Template:</strong>
+  <%= @r_page.template %>
+</p>
+
+<p>
+  <strong>Properties:</strong>
+  <%= @r_page.properties %>
+</p>
+
+<%= link_to 'Edit', edit_r_page_path(@r_page) %> |
+<%= link_to 'Back', r_pages_path %>

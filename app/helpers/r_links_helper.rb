@@ -1,0 +1,2 @@
+module RLinksHelper
+end

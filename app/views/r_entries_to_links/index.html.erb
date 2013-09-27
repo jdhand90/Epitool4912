@@ -1,0 +1,31 @@
+<h1>Listing r_entries_to_links</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>R entry</th>
+      <th>R link</th>
+      <th>Properties</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @r_entries_to_links.each do |r_entries_to_link| %>
+      <tr>
+        <td><%= r_entries_to_link.r_entry_id %></td>
+        <td><%= r_entries_to_link.r_link_id %></td>
+        <td><%= r_entries_to_link.properties %></td>
+        <td><%= link_to 'Show', r_entries_to_link %></td>
+        <td><%= link_to 'Edit', edit_r_entries_to_link_path(r_entries_to_link) %></td>
+        <td><%= link_to 'Destroy', r_entries_to_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New R entries to link', new_r_entries_to_link_path %>

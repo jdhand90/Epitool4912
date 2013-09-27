@@ -1,4 +1,21 @@
 Epitool::Application.routes.draw do
+  resources :r_property_definitions
+
+  resources :r_pages_to_entries
+
+  resources :r_contacts
+
+  resources :r_pages
+
+  resources :r_entries_to_links
+
+  resources :r_links
+
+  resources :r_entries
+
+  resources :r_languages
+
+	root 'main#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +70,6 @@ Epitool::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  
 end

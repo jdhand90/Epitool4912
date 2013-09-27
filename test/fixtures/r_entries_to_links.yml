@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  r_entry_id: 1
+  r_link_id: 1
+  properties: MyString
+
+two:
+  r_entry_id: 1
+  r_link_id: 1
+  properties: MyString

@@ -1,0 +1,43 @@
+<% entries = RPage.where(:name => "Main").first.r_entries%>
+<div style="background: #3B869F;">
+	<br />
+	<h1 style="color:#FFFFFF; padding: 0em;">EpiTool</h1>
+	<h2 style="color:#FFFFFF; padding: 0em;"><%= entries.first.entry %></h2>
+	<br />
+</div>
+<div id="tabs">
+	<ul>
+		<% counter = 0%>
+		<% RPage.all.each do |page| %>			
+			<%if !page.properties.to_s.include? "n" %>
+				<li><a href="#tabs-<%= counter %>"><%=page.name%></a></li>
+				<% counter += 1 %>
+			<% end %>			
+		<% end %>		
+	</ul>
+	<% counter = 0%>
+	<% RPage.all.each do |page| %>		
+		<%if !page.properties.to_s.include? "n" %>
+			<div id="tabs-<%= counter %>">
+				<% @page = page %>
+				<% if page.template.to_s != "" %>
+					<%= render :partial => page.template%>
+				<% else %>
+					<%= render :partial => "default"%>
+				<% end %>
+			</div>
+			<% counter += 1 %>
+		<% end %>		
+	<% end %>
+</div>
+
+<style>
+
+</style>
+
+<script>
+	$(function() 
+	{
+    	$( "#tabs" ).tabs();
+  	});
+</script>
