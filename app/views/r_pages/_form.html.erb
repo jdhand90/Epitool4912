@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :r_language_id %><br>
-    <%= f.number_field :r_language_id %>
+    <%= f.select :r_language_id, options_from_collection_for_select(RLanguage.all, 'id', 'language') %>
   </div>
   <div class="field">
     <%= f.label :name %><br>

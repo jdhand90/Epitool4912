@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :r_page_id %><br>
-    <%= f.number_field :r_page_id %>
+    <%= f.select :r_page_id, options_from_collection_for_select(RPage.all, 'id', 'name') %>
   </div>
   <div class="field">
     <%= f.label :r_entry_id %><br>
-    <%= f.number_field :r_entry_id %>
+    <%= f.select :r_entry_id, options_from_collection_for_select(REntry.all, 'id', 'title') %>
   </div>
   <div class="field">
     <%= f.label :properties %><br>
