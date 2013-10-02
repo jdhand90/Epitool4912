@@ -1,1 +1,13 @@
-THIS FILE IS FOUND IN app/assets/views/main/_gpedd.html.erb
+<div>
+	<% @page.r_entries.all.each do |entry| %>
+		<h3><%= entry.title%></h3>
+		<p><%= entry.entry %></p>
+	<% end %>
+	<% counter = 0%>
+	<h3>Members</h3>
+	<ul>		
+		<% RContact.all.each do |contact| %>
+			<%=contact.name%>
+		<% end %>
+	</ul>
+</div>

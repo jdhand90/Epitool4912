@@ -1,1 +1,8 @@
-THIS FILE IS FOUND IN app/assets/views/main/_home.html.erb
+<div>
+	<center><img src="Epitool_Banner-01.png" alt="GEARBRAIN" height="400" width="720" ></center>
+	<% @page.r_entries.all.each do |entry| %>
+		<h3><%= entry.title%></h3>
+		<p><%= entry.entry %></p>
+	<% end %>
+</div>
+
