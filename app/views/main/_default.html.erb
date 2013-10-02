@@ -1,13 +1,15 @@
 <% @page.id %>
 
 <div id="wikiList">
-	<ul>
-		<% counter = 0%>
-		<% @page.r_entries.all.each do |entry| %>			
-			<li><a href="#entry-<%= counter %>"><%=entry.title%></a></li>
-			<% counter += 1 %>						
-		<% end %>		
-	</ul>
+	<fieldset style="width:30%">
+		<ul>
+			<% counter = 0%>
+			<% @page.r_entries.all.each do |entry| %>			
+				<li><a href="#entry-<%= counter %>"><%=entry.title%></a></li>
+				<% counter += 1 %>						
+			<% end %>		
+		</ul>
+	</fieldset>
 	<% counter = 0%>
 	<% @page.r_entries.all.each do |entry| %>	
 		<div id="entry-<%= counter %>">
