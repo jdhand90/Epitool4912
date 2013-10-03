@@ -5,7 +5,7 @@
 		<ul>
 			<% counter = 0%>
 			<% @page.r_entries.all.each do |entry| %>			
-				<li><a href="#entry-<%= counter %>"><%=entry.title%></a></li>
+				<li><a href="#entry-<%= counter %>"><%=entry.title.html_safe%></a></li>
 				<% counter += 1 %>						
 			<% end %>		
 		</ul>
@@ -13,9 +13,9 @@
 	<% counter = 0%>
 	<% @page.r_entries.all.each do |entry| %>	
 		<div id="entry-<%= counter %>">
-			<h2><%= entry.title %></h2>
+			<h2><%= entry.title.html_safe %></h2>
 			<p>
-				<%= entry.entry%>
+				<%= entry.entry.html_safe%>
 			</p>
 		</div>
 		<% counter += 1 %>			

@@ -10,7 +10,9 @@
 <div id="tabs">
 	<ul>
 		<% counter = 0%>
-		<% RPage.all.each do |page| %>			
+		<%pages = RPage.all%>
+		<%pages = pages.sort{|x,y| x.order <=> y.order}%>
+		<% pages.each do |page| %>			
 			<%if !page.properties.to_s.include? "n" %>
 				<li><a href="#tabs-<%= counter %>"><%=page.name%></a></li>
 				<% counter += 1 %>
@@ -18,7 +20,7 @@
 		<% end %>		
 	</ul>
 	<% counter = 0%>
-	<% RPage.all.each do |page| %>		
+	<% pages.each do |page| %>		
 		<%if !page.properties.to_s.include? "n" %>
 			<div id="tabs-<%= counter %>">
 				<% @page = page %>
